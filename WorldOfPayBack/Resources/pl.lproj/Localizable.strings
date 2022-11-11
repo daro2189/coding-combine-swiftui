@@ -1,0 +1,24 @@
+/* 
+  Localizable.strings
+  WorldOfPayBack
+
+  Created by Dariusz Mazur on 10/11/2022.
+  
+*/
+
+"OK" = "OK";
+
+"transaction-list-view-category-filter" = "Filter Kategorii:";
+"transaction-list-view-none" = "Brak";
+"transaction-list-view-please-wait-loading" = "Ładowanie, proszę czekać...";
+"transaction-list-view-no-data-available" = "Brak Danych";
+"transaction-list-view-reload-data" = "Spróbuj ponownie";
+"transaction-list-view-total" = "Razem:";
+"transaction-list-view-no-internet-connection" = "Brak połączenia z internetem!";
+"transaction-list-view-transactions" = "Tranzakcje";
+"transaction-list-view-try-again" = "Spróbuj ponownie";
+
+"transaction-list-view-model-categorie" = "Kategoria";
+
+"api-error-invalid-response-from-the-server" = "Błędna odpowiedź z serwera";
+"api-error-unreachable-url" = "Nieosiągalny URL:";

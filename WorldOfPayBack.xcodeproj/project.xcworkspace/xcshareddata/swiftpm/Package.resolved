@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Connectivity",
+        "repositoryURL": "https://github.com/rwbutler/connectivity",
+        "state": {
+          "branch": null,
+          "revision": "92738e4059b1a58d52c2c04ebd1d799e14fc4a42",
+          "version": "5.3.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
