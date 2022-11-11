@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TransactionLoadingView: View {
+struct LoadingListView: View {
     var body: some View {
         VStack {
             Spacer()

@@ -54,17 +54,11 @@ import Connectivity
     @Published private(set) var isLoading = false
     @Published private(set) var errorMessage: String = ""
     @Published private(set) var isInternet = true
+    @Published var categoryFilter: [Category] = []
 
     private var transactionList: [TransactionModel] = []
-    private(set) var categoryFilter: [Category] = []
     private var disposables = Set<AnyCancellable>()
     private let transactionService: TransactionService
-
-    private var selectedCategory: Int? {
-        return categoryFilter.first { category in
-            category.id == selectionIndex
-        }?.id ?? nil
-    }
 
     // MARK: - Initializers
 
@@ -138,5 +132,11 @@ import Connectivity
                 }
             }
             .store(in: &disposables)
+    }
+
+    private var selectedCategory: Int? {
+        return categoryFilter.first { category in
+            category.id == selectionIndex
+        }?.id ?? nil
     }
 }

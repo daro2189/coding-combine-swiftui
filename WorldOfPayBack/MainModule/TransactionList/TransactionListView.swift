@@ -8,34 +8,23 @@
 import SwiftUI
 
 struct TransactionListView: View {
-    private enum Constants {
-        static let defaultEdges = EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20)
-    }
 
     // MARK: - Properties & Dependencies
 
-    @StateObject var viewModel: TransactionListViewModel
+    @ObservedObject var viewModel: TransactionListViewModel
 
     // MARK: - View
 
     var body: some View {
         NavigationView {
             VStack {
-                HStack {
-                    Text(LocalizedStringKey("transaction-list-view-category-filter"))
-                    Picker(selection: $viewModel.selectionIndex, label: Text(LocalizedStringKey("transaction_list_view_category_filter"))) {
-                        Text(LocalizedStringKey("transaction-list-view-none")).tag(-1)
-                        ForEach(viewModel.categoryFilter) { category in
-                            Text(category.name).tag(category.id)
-                        }
-                    }
-                    .pickerStyle(MenuPickerStyle())
-                }
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(Constants.defaultEdges)
+                CategoryPickerView(
+                    selectedIndex: $viewModel.selectionIndex,
+                    categoryFilter: viewModel.categoryFilter
+                )
 
                 if viewModel.isLoading {
-                    TransactionLoadingView()
+                    LoadingListView()
 
                 } else {
                     if viewModel.isTransactionListEmpty {
@@ -66,21 +55,8 @@ struct TransactionListView: View {
                     }
                 }
 
-                HStack {
-                    Text(LocalizedStringKey("transaction-list-view-total"))
-                        .frame(alignment: .trailing)
-                    Text(viewModel.totalCalculatedPrice)
-                }
-                .frame(maxWidth: .infinity, alignment: .trailing)
-                .padding(Constants.defaultEdges)
-
-                if !viewModel.isInternet {
-                    Text(LocalizedStringKey("transaction-list-view-no-internet-connection"))
-                        .foregroundColor(.white)
-                        .frame(maxWidth: .infinity)
-                        .padding(10)
-                        .background(.red)
-                }
+                TotalAmountView(totalCalculatedPrice: viewModel.totalCalculatedPrice)
+                NoInternetView(isInternetConnection: viewModel.isInternet)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .navigationTitle(LocalizedStringKey("transaction-list-view-transactions"))
