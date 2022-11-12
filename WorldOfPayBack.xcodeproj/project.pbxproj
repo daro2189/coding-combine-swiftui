@@ -64,6 +64,7 @@
 		40C43CB1291EEA1500182054 /* CategoryPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPickerView.swift; sourceTree = "<group>"; };
 		40C43CB4291EEBFB00182054 /* TotalAmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalAmountView.swift; sourceTree = "<group>"; };
 		40C43CB6291EEC7100182054 /* NoInternetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoInternetView.swift; sourceTree = "<group>"; };
+		40C43CC429200F2300182054 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		40E87E9F291D2B9A00044B59 /* WorldOfPayBack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldOfPayBack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40E87EA2291D2B9A00044B59 /* WorldOfPayBackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldOfPayBackApp.swift; sourceTree = "<group>"; };
 		40E87EA6291D2B9C00044B59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -148,6 +149,7 @@
 		40E87EA1291D2B9A00044B59 /* WorldOfPayBack */ = {
 			isa = PBXGroup;
 			children = (
+				40C43CC429200F2300182054 /* Info.plist */,
 				40E87EEB291D541400044B59 /* Resources */,
 				40E87ED6291D2C4400044B59 /* Utils */,
 				40E87ED5291D2C3E00044B59 /* Models */,
@@ -501,6 +503,7 @@
 				DEVELOPMENT_TEAM = WPG9S7ES8V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WorldOfPayBack/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -667,6 +670,7 @@
 				DEVELOPMENT_TEAM = WPG9S7ES8V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WorldOfPayBack/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -696,6 +700,7 @@
 				DEVELOPMENT_TEAM = WPG9S7ES8V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WorldOfPayBack/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -58,9 +58,10 @@ struct TransactionListView: View {
                 TotalAmountView(totalCalculatedPrice: viewModel.totalCalculatedPrice)
                 NoInternetView(isInternetConnection: viewModel.isInternet)
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
             .navigationTitle(LocalizedStringKey("transaction-list-view-transactions"))
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
+        .navigationViewStyle(.stack)
         .alert(viewModel.errorMessage, isPresented: $viewModel.isError, actions: {
             Button(LocalizedStringKey("OK")) { }
             Button(LocalizedStringKey("transaction-list-view-try-again"), role: .cancel) {
