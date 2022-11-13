@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 
+//sourcery: AutoMockable
 protocol APIService {
     func getTransactions() -> AnyPublisher<[TransactionModel], Error>
 }

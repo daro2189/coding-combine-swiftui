@@ -7,6 +7,7 @@
 
 import Combine
 
+//sourcery: AutoMockable
 protocol TransactionService {
     func fetchList() -> AnyPublisher<[TransactionModel], Error>
 }
